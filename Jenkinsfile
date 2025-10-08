@@ -9,14 +9,14 @@ pipeline{
         }
         stage('Docker login'){
             steps{
-                bat 'docker login -u "Deekshu209" -p "Admins209"'
+                bat 'docker login -u "deekshu209" -p "Admins209"'
             }
         }
         stage('Push docker Image to Docker hub'){
             steps{
                 echo 'Pushing Docker image to Docker Hub...'
-                bat 'docker tag kubdemoapp:v1 Deekshu209/sample:kubeimage1'
-                bat 'docker push Deekshu209/sample:kubeimage1'
+                bat 'docker tag kubdemoapp:v1 deekshu209/sample:kubeimage1'
+                bat 'docker push deekshu209/sample:kubeimage1'
             }
         }
         stage('Deploy to Kubernetes'){
@@ -36,3 +36,4 @@ pipeline{
     }
 
 }
+
