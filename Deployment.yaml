@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: kubedemoapp
-        image: Deekshu209/sample:kubeimage1
+        image: deekshu209/sample:kubeimage1
         ports:
         - containerPort: 5000
+
         
