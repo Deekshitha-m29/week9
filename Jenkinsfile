@@ -22,7 +22,7 @@ pipeline{
         stage('Deploy to Kubernetes'){
             steps{
                 bat  'kubectl apply -f deployment.yaml --validate=false'
-                bat 'kubectl apply -f serive.yaml'
+                bat 'kubectl apply -f service.yaml'
             }
         }
     }
@@ -36,4 +36,5 @@ pipeline{
     }
 
 }
+
 
